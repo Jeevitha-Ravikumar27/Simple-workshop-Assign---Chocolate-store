@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+.i{
+    text-align: center;
+}
+.ic{
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 20vh;
+    padding-left: 10px;
+    padding-right: 20px;
+}
+.o{
+    margin-bottom: 20px;
+}
+p{
+
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.u{
+    margin-top: 20px;
+}
+h2{
+    margin-top: 20px;
+}
+.question {
+    margin-bottom: 15px;
+    margin-top: 15px ;
+}

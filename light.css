@@ -1,0 +1,42 @@
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background:linear-gradient(120deg,black,grey,black);
+    color: white;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.bulb-image {
+    width: 100px; /* Make bulb small */
+}
+
+.cat-image {
+    width: 150px; /* Adjust cat size */
+    margin-top: 20px;
+}
+
+.switch-board {
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.off-switch {
+    background-color: red;
+    color: white;
+}
+
+.on-switch {
+    background-color: green;
+    color: white;
+}

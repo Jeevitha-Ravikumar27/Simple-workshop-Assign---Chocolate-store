@@ -1,0 +1,112 @@
+/* Import Netflix Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 100vh;
+    background: url('netflix-logo-visible-smartphone-screen-website-homepage-background-223228798.webp') no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+/* Dark Overlay */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+/* Navbar */
+nav {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+}
+
+.logo {
+    width: 150px;
+}
+
+.signin-btn {
+    background: #e50914;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Main Content */
+.content {
+    position: relative;
+    max-width: 650px;
+    z-index: 1;
+}
+
+.content h1 {
+    font-size: 45px;
+    font-weight: bold;
+}
+
+.content p {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.email-text {
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+/* Email Signup Box */
+.email-signup {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.email-signup input {
+    width: 300px;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    background: black
+}
+
+.get-started-btn {
+    background: #e50914;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.get-started-btn:hover, .signin-btn:hover {
+    background: #b20710;
+}

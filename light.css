@@ -1,7 +1,7 @@
 body {
     text-align: center;
     font-family: Arial, sans-serif;
-    background:linear-gradient(120deg,black,grey,black);
+    background:linear-gradient(90deg,black,rgb(152, 147, 147),black);
     color: white;
 }
 
@@ -13,11 +13,11 @@ body {
 }
 
 .bulb-image {
-    width: 100px; /* Make bulb small */
+    width: 100px; 
 }
 
 .cat-image {
-    width: 150px; /* Adjust cat size */
+    width: 150px; 
     margin-top: 20px;
 }
 
@@ -26,11 +26,13 @@ body {
 }
 
 button {
-    padding: 10px;
+    padding: 12px;
     margin: 5px;
     cursor: pointer;
     font-size: 16px;
+    border-radius: 90%;
 }
+
 .off-switch {
     background-color: red;
     color: white;
@@ -40,3 +42,22 @@ button {
     background-color: green;
     color: white;
 }
+@keyframes move-cat {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(50px); }
+    100% { transform: translateX(0); }
+}
+
+
+.cat.on {
+    animation: move-cat 2s infinite ease-in-out;
+    filter: brightness(100%);
+}
+
+ 
+.cat.off {
+    filter: brightness(0%);
+    animation: none; 
+}
+
+

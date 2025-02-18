@@ -14,7 +14,25 @@ body {
 
 .bulb-image {
     width: 100px; /* Smaller bulb */
+    transition: filter 0.5s ease-in-out;
 }
+@keyframes color-change {
+    0% { filter: hue-rotate(0deg); }
+    33% { filter: hue-rotate(90deg); }  /* Red */
+    66% { filter: hue-rotate(180deg); } /* Green */
+    100% { filter: hue-rotate(270deg); } /* Yellow */
+}
+
+/* When the light is ON, change bulb colors */
+.bulb-image.on {
+    animation: color-change 1s infinite;
+}
+
+/* When light is OFF, bulb is normal */
+.bulb-image.off {
+    filter: brightness(50%);
+}
+
 
 /* Default cat styling */
 .cat-image {
@@ -24,17 +42,17 @@ body {
 }
 
 /* Animation for cat movement and jumping */
-@keyframes move-jump-cat {
-    0% { transform: translateX(0) translateY(0); }
-    25% { transform: translateX(25px) translateY(-20px); } /* Jump up */
-    50% { transform: translateX(50px) translateY(0); }  /* Back down */
-    75% { transform: translateX(25px) translateY(-20px); } /* Jump again */
-    100% { transform: translateX(0) translateY(0); }  /* Back to ground */
+@keyframes jump-dance {
+    0% { transform: translateX(0) translateY(0) rotate(0deg); }
+    25% { transform: translateX(20px) translateY(-30px) rotate(10deg); }
+    50% { transform: translateX(0) translateY(0) rotate(-10deg); }
+    75% { transform: translateX(-20px) translateY(-30px) rotate(10deg); }
+    100% { transform: translateX(0) translateY(0) rotate(0deg); }
 }
 
-/* When light is ON, cat moves and jumps */
+/* When light is ON, cat moves, jumps, and dances */
 .cat-image.on {
-    animation: move-jump-cat 2s infinite ease-in-out;
+    animation: jump-dance 1.5s infinite ease-in-out;
     filter: brightness(100%);
 }
 
@@ -43,7 +61,6 @@ body {
     filter: brightness(0%);
     animation: none;
 }
-
 .switch-board {
     margin-top: 20px;
 }

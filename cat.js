@@ -6,6 +6,10 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("onSwitch").addEventListener("click", function () {
         // Change bulb image to ON state
         bulb.src = "https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/bulb-go-on-img.png";
+        
+        
+        bulb.classList.add("on");
+        bulb.classList.remove("off");
 
         // Make cat move and visible
         cat.classList.add("on");
@@ -19,6 +23,8 @@ document.addEventListener("DOMContentLoaded", function () {
         // Change bulb image to OFF state
         bulb.src = "https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/bulb-go-off-img.png";
 
+         bulb.classList.add("off");
+        bulb.classList.remove("on");
         // Stop cat movement and make it dark
         cat.classList.add("off");
         cat.classList.remove("on");
